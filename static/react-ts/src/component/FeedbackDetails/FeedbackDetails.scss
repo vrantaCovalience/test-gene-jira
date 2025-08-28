@@ -1,0 +1,17 @@
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  &--bg {
+    background-color: #d32f2f !important;
+    color: white !important;
+  }
+}
+
+.feedback-buttons {
+  &--bg {
+    background-color: #1976d2 !important;
+    color: white !important;
+  }
+}
