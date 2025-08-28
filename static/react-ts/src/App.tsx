@@ -1,19 +1,12 @@
-import { useState } from "react";
+import { Box } from "@mui/material";
 
-import "./App.css";
+import { Snackbar } from "./component";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <Box sx={{ padding: 2 }}>
+      <Snackbar message="I will help you write clear, actionable description and detailed acceptance criteria." />
+    </Box>
   );
 }
 
