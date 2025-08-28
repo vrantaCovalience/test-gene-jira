@@ -34,8 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx}'",
-    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix",
-    "pack": "tfx extension create --rev-version --manifest-globs vss-extension.json",
+    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix"
+    
   },
   "eslintConfig": {
     "extends": [
