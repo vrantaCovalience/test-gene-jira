@@ -1,0 +1,69 @@
+{
+  "manifestVersion": 1,
+  "id": "ai-test-case-and-ac-generator",
+  "name": "AI Test Cases and AC Generator React",
+  "version": "1.0.123",
+  "publisher": "YudhweerSingh",
+  "public": false,
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "An Azure DevOps extension built with React",
+  "categories": ["Azure Repos", "Azure Pipelines", "Azure Boards"],
+  "scopes": ["vso.work_full", "vso.project", "vso.profile"],
+  "icons": {
+    "default": "build/images/icon.png"
+  },
+  "files": [
+    {
+      "path": "build",
+      "addressable": true
+    },
+    {
+      "path": "views/admin-ai-dashboard-settings.html",
+      "addressable": true
+    },
+    {
+      "path": "views/admin-ai-dashboard-settings.js",
+      "addressable": true
+    },
+    {
+      "path": "views/admin-ai-dashboard-settings.css",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "workItemAiDashboard",
+      "type": "ms.vss-work-web.work-item-form-page",
+      "targets": ["ms.vss-work-web.work-item-form"],
+      "properties": {
+        "name": "AI Dashboard",
+        "uri": "build/index.html"
+      }
+    },
+    {
+      "id": "AiDashboardSettings",
+      "type": "ms.vss-web.hub",
+      "targets": ["ms.vss-web.project-admin-hub-group"],
+      "properties": {
+        "name": "AI Dashboard Settings",
+        "uri": "views/admin-ai-dashboard-settings.html"
+      },
+      "permissions": [
+        {
+          "namespaceId": "52d39943-cb85-4d7f-8fa8-c6baac873819",
+          "bit": 2,
+          "displayName": "Project Administrator"
+        }
+      ]
+    }
+  ]
+}

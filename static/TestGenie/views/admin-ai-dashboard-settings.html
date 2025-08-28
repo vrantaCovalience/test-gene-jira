@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Project Selection</title>
+    <script type="text/javascript" src="../lib/VSS.SDK.min.js"></script>
+    <script src="admin-ai-dashboard-settings.js" defer></script>
+    <link rel="stylesheet" href="admin-ai-dashboard-settings.css" />
+  </head>
+  <body class="main-content">
+    <div id="loader" class="loader">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success">
+      <p id="successMessage" class="successMessage hidden" aria-live="polite">
+        Project selection saved successfully!
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container section hidden" id="content">
+      <h2>Select Projects for Extension Access</h2>
+
+      <!-- Search Bar -->
+      <input
+        type="text"
+        id="projectSearch"
+        class="project-search"
+        placeholder="Search projects..."
+        onkeyup="filterProjects()"
+      />
+
+      <!-- Project Table -->
+      <table class="project-table">
+        <thead class="project-table__head">
+          <tr>
+            <th>Project Name</th>
+            <th class="table__head--textAlign">Enable/Disable</th>
+          </tr>
+        </thead>
+        <tbody id="projectSelection" class="projectSelection"></tbody>
+      </table>
+
+      <!-- No Records Found Message -->
+      <div id="noRecordsMessage" class="no-records hidden">
+        <p>No records found.</p>
+      </div>
+
+      <div class="saveButton">
+        <button id="saveSelectionBtn" class="saveSelectionBtn">Save</button>
+      </div>
+    </div>
+  </body>
+</html>
