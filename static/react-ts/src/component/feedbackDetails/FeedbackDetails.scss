@@ -1,0 +1,18 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variable.scss";
+
+.MuiBox-root {
+  .MuiTextField-root {
+    width: 708px !important;
+    margin: 12px 0 0 0 !important;
+  }
+}
+
+.feedback-buttons {
+  .MuiButton-sizeMedium {
+    @include primary-button;
+  }
+  .action-buttons--bg {
+    @include secondary-button;
+  }
+}

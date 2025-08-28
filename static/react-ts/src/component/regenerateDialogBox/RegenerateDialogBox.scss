@@ -1,0 +1,17 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variable.scss";
+
+.MuiPaper-rounded {
+  .dialog__button {
+    padding: 24px;
+    .dialog__button--bg-light {
+      @include secondary-button;
+      padding: 7px 25px;
+    }
+    .dialog__button--bg-dark {
+      @include primary-button;
+      margin-left: 16px;
+      padding: 7px 25px;
+    }
+  }
+}

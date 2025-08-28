@@ -1,0 +1,35 @@
+@mixin card-title-style {
+  font-size: 23px;
+  line-height: 33px;
+  color: #3d3d3d;
+}
+
+@mixin card-button-style {
+  background: #0078d4;
+  color: #ffffff;
+}
+
+@mixin card-button-style-hover {
+  background: #026fc3;
+  color: #ffffff;
+}
+
+@mixin inactive-tab-button-style {
+  background-color: #eaeaea;
+  color: #000000;
+}
+
+@mixin disable-button-style {
+  background: #eaeaea;
+  color: #aeaeae;
+}
+
+@mixin primary-button {
+  background: #055160;
+  color: white;
+}
+
+@mixin secondary-button {
+  background: #919191;
+  color: white;
+}

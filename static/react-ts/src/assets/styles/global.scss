@@ -1,0 +1,129 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.card {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0;
+  max-width: 804px;
+  margin-bottom: 30px;
+
+  .card__title {
+    @include card-title-style;
+    background-color: #f7f7f7;
+    padding: 16px 0;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .card__buttons {
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card__button {
+    border-radius: 6px;
+    min-width: 549px;
+    padding: 13px 0;
+    @include card-button-style;
+
+    &:hover {
+      @include card-button-style-hover;
+    }
+    &:disabled {
+      @include disable-button-style;
+    }
+  }
+  h6 {
+    font-size: 15px;
+    color: $inactive-text-color;
+  }
+}
+
+.card__button--margin-bottom {
+  margin-bottom: 35px !important;
+}
+
+.card__button--margin-top {
+  margin-top: 35px !important;
+}
+
+.card__buttons {
+  .MuiButton-textPrimary {
+    text-transform: none !important;
+    font-size: 18px !important;
+  }
+}
+
+.infoSnackbar .infoSnackbar__message {
+  background-color: #cff4fc;
+  border: 1px solid #9eeaf9;
+  padding: 5px 13px;
+  margin: 12px 16px;
+  box-shadow: none;
+
+  .MuiSnackbarContent-message {
+    color: #055160;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card {
+    max-width: 669px !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .card {
+    max-width: 280px !important;
+  }
+  .infoSnackbar .infoSnackbar__message .MuiSnackbarContent-message {
+    font-size: 13px;
+  }
+  .card .card__title {
+    font-size: 16px;
+    line-height: 33px;
+    padding: 10px 0;
+  }
+  .card__buttons .MuiButton-textPrimary {
+    font-size: 14px !important;
+  }
+  .card .card__button {
+    border-radius: 3px;
+    min-width: 219px;
+    padding: 8px 0;
+  }
+  .card .card__buttons {
+    height: 239px;
+  }
+  .card__button--margin-bottom {
+    margin-bottom: 22px !important;
+  }
+  .card__button--margin-top {
+    margin-top: 22px !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .card {
+    max-width: 470px !important;
+  }
+  .card .card__button {
+    border-radius: 3px;
+    min-width: 348px;
+    padding: 10px 0;
+  }
+  .card__button--margin-bottom {
+    margin-bottom: 30px !important;
+  }
+  .card__button--margin-top {
+    margin-top: 26px !important;
+  }
+  .card .card__buttons {
+    height: 319px;
+  }
+}

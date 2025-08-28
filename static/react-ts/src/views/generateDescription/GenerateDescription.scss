@@ -1,0 +1,188 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variable.scss";
+
+.section__left {
+  .MuiLinearProgress-root {
+    width: 97%;
+    margin: auto;
+  }
+  .MuiTextField-root {
+    width: 708px;
+  }
+  .MuiTabs-flexContainer {
+    max-width: 788px;
+  }
+  .MuiAppBar-colorPrimary {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .MuiTypography-body1 {
+    display: flex;
+    justify-content: center;
+    .MuiInputBase-multiline::before {
+      border-bottom: none;
+    }
+  }
+  .MuiBox-root {
+    padding: 0 !important;
+  }
+  .MuiTabs-flexContainer {
+    .MuiTab-textColorInherit {
+      min-width: 344px;
+    }
+  }
+  .MuiTabs-flexContainer {
+    .MuiTab-textColorInherit {
+      @include inactive-tab-button-style;
+      margin: 12px 10px;
+      border-radius: 4px;
+      text-transform: none;
+      font-size: 17px;
+    }
+  }
+
+  .MuiTab-textColorInherit.Mui-selected {
+    @include card-button-style;
+  }
+
+  .MuiTabs-root {
+    .MuiTabs-scroller {
+      display: flex;
+      justify-content: center;
+
+      .MuiTabs-indicator {
+        height: 0;
+      }
+    }
+  }
+}
+
+.action-buttons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+  max-width: 708px;
+
+  .MuiButton-sizeMedium {
+    margin: 12px 0 0 12px;
+    background-color: #055160;
+    padding: 8px 42px;
+    text-transform: none;
+    font-size: 17px;
+    box-shadow: none;
+  }
+
+  .action-buttons--bg {
+    @include secondary-button;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.section__right {
+  display: flex;
+  justify-content: end;
+  flex-flow: column;
+  margin-bottom: 57px;
+
+  button {
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    height: 33px;
+    width: 33px;
+    border-radius: 27px;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+  }
+  .section__right {
+    [aria-label="Regenerate"] {
+      height: 33px !important;
+    }
+  }
+
+  .MuiIconButton-sizeMedium {
+    padding: 0;
+  }
+
+  .section__right__bg-regenerate {
+    background-color: #0078d4;
+  }
+
+  .section__right__bg-dislike {
+    background-color: #ff4a4a;
+  }
+
+  .section__right__bg-like {
+    background-color: #24b49e;
+  }
+}
+
+.MuiFilledInput-underline {
+  background-color: #f2f8fd !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .section__left {
+    margin-left: 10px;
+    .MuiBox-root .MuiTextField-root {
+      width: 323px !important;
+      margin: 12px 0 0 0 !important;
+    }
+    .MuiTabs-flexContainer {
+      .MuiTab-textColorInherit {
+        min-width: 125px !important;
+        font-size: 10px;
+      }
+    }
+  }
+  .section__right {
+    margin-right: 20px;
+    .icon {
+      height: 29px;
+      width: 29px;
+    }
+  }
+  .action-buttons .MuiButton-sizeMedium {
+    padding: 5px 24px;
+    font-size: 12px;
+  }
+
+  .section__left .MuiLinearProgress-root {
+    width: 93%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .section__left {
+    margin-left: 10px;
+    .MuiBox-root .MuiTextField-root {
+      width: 450px !important;
+      margin: 12px 0 0 0 !important;
+    }
+    .MuiTabs-flexContainer {
+      .MuiTab-textColorInherit {
+        min-width: 215px !important;
+        font-size: 13px;
+      }
+    }
+    .action-buttons .MuiButton-sizeMedium {
+      margin: 12px 12px 0 0;
+    }
+  }
+  .section__left {
+    .MuiLinearProgress-root {
+      width: 96% !important;
+    }
+  }
+}

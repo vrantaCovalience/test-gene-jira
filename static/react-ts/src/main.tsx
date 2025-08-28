@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 
 import "@atlaskit/css-reset";
-import "./assets/styles/index.css";
+import "./assets/styles/global.scss";
 // Create a basic MUI theme
 const theme = createTheme({
   palette: {
